@@ -29,6 +29,10 @@
   font-weight: 700;
 }
 
+/* TARGETED FIX: Added specific selectors and -webkit-text-fill-color 
+   to override the white text issues from index.css */
+input[type="email"],
+input[type="password"],
 input {
   width: 100%;
   padding: 12px; /* Slightly larger touch target */
@@ -37,8 +41,12 @@ input {
   border-radius: 6px;
   outline: none;
   transition: border-color 0.2s;
-  color: #1a1a1a !important;      /* Forces text to be dark gray/black */
-  background-color: #ffffff !important; /* Forces background to be white */
+  
+  /* COLOR OVERRIDES */
+  color: #000000 !important;            /* Forces text to be black */
+  background-color: #ffffff !important;   /* Forces background to be white */
+  -webkit-text-fill-color: #000000 !important; /* Critical fix for Chrome/Safari */
+  opacity: 1 !important;
   font-size: 16px;
 }
 
@@ -49,7 +57,7 @@ input::placeholder {
 /* Focus state for better UX validation */
 input:focus {
   border-color: #3b82f6;
-  ring: 2px solid #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 button {
