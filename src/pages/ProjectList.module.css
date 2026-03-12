@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  max-width: 1200px;        /* Limits width on large screens */
+  margin: 0 auto;           /* Centers the entire container */
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centers the header and grid horizontally */
+}
+
+.header {
+  text-align: center;       /* Centers the text inside the header */
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  width: 100%;             /* Ensures grid takes full width of container */
+  justify-content: center; /* Centers items if there's extra space */
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) { 
+  .grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  } 
+}
+
+/* Desktop: 3 columns for a more professional look */
+@media (min-width: 1024px) { 
+  .grid { 
+    grid-template-columns: repeat(3, 1fr); 
+  } 
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* Added a hover effect to make it feel more interactive */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cardBody p {
+  margin: 0.5rem 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* Status Badges - Requirement 2.32 */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.inprogress { background: #dbeafe; color: #1e40af; } /* Blue */
+.completed { background: #dcfce7; color: #166534; }  /* Green */
+.delayed { background: #fee2e2; color: #991b1b; }    /* Red */
+
+/* Added a professional button style for the card */
+.viewBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}

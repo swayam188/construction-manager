@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* Updated background to a professional gradient */
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
+  padding: 20px;
+  top: 0;
+  left: 0;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem; /* Increased padding for better spacing */
+  border-radius: 12px; /* Smoother corners */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Deeper shadow for "lift" */
+  width: 100%;
+  max-width: 375px; /* Mobile-first base as per requirements */
+  text-align: center; /* Aligns headings and error messages to center */
+}
+
+/* Added styling for the heading to make it look professional */
+.card h2 {
+  margin-bottom: 1.5rem;
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  padding: 12px; /* Slightly larger touch target */
+  margin: 10px 0;
+  border: 1px solid #d1d5db; /* Lighter, modern border color */
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Focus state for better UX validation */
+input:focus {
+  border-color: #3b82f6;
+  ring: 2px solid #3b82f6;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb; /* Construction-industry blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Added hover effect for interactivity */
+button:hover {
+  background: #1d4ed8;
+}
+
+.error { 
+  color: #dc2626; 
+  font-size: 0.85rem; 
+  margin-bottom: 10px;
+  display: block; /* Ensures it takes its own line */
+}
