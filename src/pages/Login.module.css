@@ -37,6 +37,13 @@ input {
   border-radius: 6px;
   outline: none;
   transition: border-color 0.2s;
+  color: #1a1a1a !important;      /* Forces text to be dark gray/black */
+  background-color: #ffffff !important; /* Forces background to be white */
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #6b7280;
 }
 
 /* Focus state for better UX validation */
